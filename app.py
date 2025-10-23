@@ -56,24 +56,20 @@ with st.sidebar:
     st.markdown("### Configuración")
     
     with st.container():
-        st.markdown('<div class="sidebar-section">', unsafe_allow_html=True)
         st.markdown("**Herramientas de dibujo**")
         stroke_width = st.slider('Ancho del trazo', 1, 20, 5)
         stroke_color = st.color_picker('Color del trazo', '#000000')
-        st.markdown('</div>', unsafe_allow_html=True)
     
     with st.container():
-        st.markdown('<div class="sidebar-section">', unsafe_allow_html=True)
         st.markdown("**🔑 API Key**")
         api_key = st.text_input('Ingresa tu clave de OpenAI', type='password')
-        st.markdown('</div>', unsafe_allow_html=True)
-    
+
     st.markdown("---")
     st.markdown("### ℹ️ Acerca de")
     st.markdown("Esta aplicación utiliza IA para interpretar bocetos dibujados a mano.")
 
 # Área principal de dibujo
-st.markdown("### ✏️ Panel de Dibujo")
+st.markdown("### Panel de Dibujo")
 st.markdown('<div class="canvas-container">', unsafe_allow_html=True)
 
 canvas_result = st_canvas(
@@ -90,7 +86,7 @@ canvas_result = st_canvas(
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Botón de análisis
-analyze_button = st.button("🔍 Analizar Boceto", type="primary", use_container_width=True)
+analyze_button = st.button("Analizar Boceto", type="primary", use_container_width=True)
 
 # Procesamiento
 if canvas_result.image_data is not None and api_key and analyze_button:
@@ -146,12 +142,3 @@ elif analyze_button:
         st.warning("⚠️ Por favor ingresa tu API key de OpenAI en el panel lateral.")
     if canvas_result.image_data is None:
         st.info("🎨 Dibuja algo en el panel antes de analizar.")
-
-# Footer
-st.markdown("---")
-st.markdown(
-    "<div style='text-align: center; color: #6b7280;'>"
-    "Dibuja, analiza y descubre • Desarrollado con Streamlit y OpenAI"
-    "</div>",
-    unsafe_allow_html=True
-)
