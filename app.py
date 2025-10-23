@@ -27,7 +27,7 @@ st.markdown("""
 <style>
     .main-title {
         font-size: 2.5rem;
-        color: #000000;
+        color: #FFFFFF;
         text-align: center;
         margin-bottom: 1rem;
         font-weight: 600;
@@ -42,13 +42,6 @@ st.markdown("""
         background: #f8fafc;
         padding: 1.5rem;
         border-radius: 12px;
-        margin: 1rem 0;
-    }
-    .canvas-container {
-        border: 2px solid #e5e7eb;
-        border-radius: 12px;
-        padding: 1rem;
-        background: white;
         margin: 1rem 0;
     }
     .analyze-btn {
