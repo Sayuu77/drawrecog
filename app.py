@@ -44,17 +44,6 @@ st.markdown("""
         border-radius: 12px;
         margin: 1rem 0;
     }
-    .analyze-btn {
-        width: 100%;
-        margin: 1rem 0;
-    }
-    .response-box {
-        background: #f0f9ff;
-        border: 1px solid #bae6fd;
-        border-radius: 12px;
-        padding: 1.5rem;
-        margin: 1rem 0;
-    }
 </style>
 """, unsafe_allow_html=True)
 
