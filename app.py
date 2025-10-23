@@ -129,7 +129,7 @@ if canvas_result.image_data is not None and api_key and analyze_button:
             
             # Mostrar resultado
             if response.choices[0].message.content:
-                st.markdown("### 📝 Interpretación")
+                st.markdown("### Interpretación")
                 st.markdown('<div class="response-box">', unsafe_allow_html=True)
                 st.write(response.choices[0].message.content)
                 st.markdown('</div>', unsafe_allow_html=True)
